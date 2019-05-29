@@ -1,0 +1,478 @@
+2019-05-27 23:10:02,091 level=INFO message= * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-05-27 23:10:07,266 level=INFO message=127.0.0.1 - - [27/May/2019 23:10:07] "GET /help HTTP/1.1" 200 -
+2019-05-27 23:10:09,117 level=INFO message=127.0.0.1 - - [27/May/2019 23:10:09] "GET /help HTTP/1.1" 200 -
+2019-05-27 23:10:13,349 level=INFO message=127.0.0.1 - - [27/May/2019 23:10:13] "GET / HTTP/1.1" 200 -
+2019-05-28 21:06:46,066 level=INFO message= * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-05-28 21:07:32,179 level=ERROR message=MySQL connection is NOT OK!
+2019-05-28 21:07:32,182 level=INFO message=127.0.0.1 - - [28/May/2019 21:07:32] "POST /add HTTP/1.1" 200 -
+2019-05-28 21:07:52,952 level=ERROR message=Not Found
+2019-05-28 21:07:52,953 level=INFO message=127.0.0.1 - - [28/May/2019 21:07:52] "GET /list/2 HTTP/1.1" 200 -
+2019-05-28 21:07:57,205 level=ERROR message=Exception on /list [GET]
+Traceback (most recent call last):
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 67, in list
+    cur = mysql.connection.cursor()
+AttributeError: 'MySQL' object has no attribute 'connection'
+2019-05-28 21:07:57,210 level=INFO message=127.0.0.1 - - [28/May/2019 21:07:57] "GET /list HTTP/1.1" 500 -
+2019-05-28 21:08:00,091 level=ERROR message=Exception on /list [GET]
+Traceback (most recent call last):
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 67, in list
+    cur = mysql.connection.cursor()
+AttributeError: 'MySQL' object has no attribute 'connection'
+2019-05-28 21:08:00,094 level=INFO message=127.0.0.1 - - [28/May/2019 21:08:00] "GET /list HTTP/1.1" 500 -
+2019-05-28 21:09:34,906 level=ERROR message=MySQL connection is NOT OK!
+2019-05-28 21:09:34,907 level=INFO message=127.0.0.1 - - [28/May/2019 21:09:34] "POST /add HTTP/1.1" 200 -
+2019-05-28 21:11:52,232 level=ERROR message=Exception on /list [GET]
+Traceback (most recent call last):
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 67, in list
+    cur = mysql.connection.cursor()
+AttributeError: 'MySQL' object has no attribute 'connection'
+2019-05-28 21:11:52,235 level=INFO message=127.0.0.1 - - [28/May/2019 21:11:52] "GET /list HTTP/1.1" 500 -
+2019-05-28 21:27:47,671 level=INFO message= * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-05-28 21:28:12,359 level=ERROR message=MySQL connection is NOT OK!
+2019-05-28 21:28:12,364 level=INFO message=127.0.0.1 - - [28/May/2019 21:28:12] "POST /add HTTP/1.1" 200 -
+2019-05-28 21:28:20,149 level=ERROR message=Exception on /list [GET]
+Traceback (most recent call last):
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 67, in list
+    cur = mysql.connection.cursor()
+  File "/home/jean/.local/lib/python3.5/site-packages/flask_mysqldb/__init__.py", line 94, in connection
+    ctx.mysql_db = self.connect
+  File "/home/jean/.local/lib/python3.5/site-packages/flask_mysqldb/__init__.py", line 81, in connect
+    return MySQLdb.connect(**kwargs)
+  File "/home/jean/.local/lib/python3.5/site-packages/MySQLdb/__init__.py", line 84, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/jean/.local/lib/python3.5/site-packages/MySQLdb/connections.py", line 164, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+MySQLdb._exceptions.OperationalError: (1044, "Access denied for user 'jean'@'%%' to database 'instelipost'")
+2019-05-28 21:28:20,152 level=INFO message=127.0.0.1 - - [28/May/2019 21:28:20] "GET /list HTTP/1.1" 500 -
+2019-05-28 21:28:21,650 level=ERROR message=Exception on /list [GET]
+Traceback (most recent call last):
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 67, in list
+    cur = mysql.connection.cursor()
+  File "/home/jean/.local/lib/python3.5/site-packages/flask_mysqldb/__init__.py", line 94, in connection
+    ctx.mysql_db = self.connect
+  File "/home/jean/.local/lib/python3.5/site-packages/flask_mysqldb/__init__.py", line 81, in connect
+    return MySQLdb.connect(**kwargs)
+  File "/home/jean/.local/lib/python3.5/site-packages/MySQLdb/__init__.py", line 84, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/jean/.local/lib/python3.5/site-packages/MySQLdb/connections.py", line 164, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+MySQLdb._exceptions.OperationalError: (1044, "Access denied for user 'jean'@'%%' to database 'instelipost'")
+2019-05-28 21:28:21,652 level=INFO message=127.0.0.1 - - [28/May/2019 21:28:21] "GET /list HTTP/1.1" 500 -
+2019-05-28 21:28:22,452 level=ERROR message=Exception on /list [GET]
+Traceback (most recent call last):
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 67, in list
+    cur = mysql.connection.cursor()
+  File "/home/jean/.local/lib/python3.5/site-packages/flask_mysqldb/__init__.py", line 94, in connection
+    ctx.mysql_db = self.connect
+  File "/home/jean/.local/lib/python3.5/site-packages/flask_mysqldb/__init__.py", line 81, in connect
+    return MySQLdb.connect(**kwargs)
+  File "/home/jean/.local/lib/python3.5/site-packages/MySQLdb/__init__.py", line 84, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/jean/.local/lib/python3.5/site-packages/MySQLdb/connections.py", line 164, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+MySQLdb._exceptions.OperationalError: (1044, "Access denied for user 'jean'@'%%' to database 'instelipost'")
+2019-05-28 21:28:22,458 level=INFO message=127.0.0.1 - - [28/May/2019 21:28:22] "GET /list HTTP/1.1" 500 -
+2019-05-28 21:28:22,655 level=ERROR message=Exception on /list [GET]
+Traceback (most recent call last):
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 67, in list
+    cur = mysql.connection.cursor()
+  File "/home/jean/.local/lib/python3.5/site-packages/flask_mysqldb/__init__.py", line 94, in connection
+    ctx.mysql_db = self.connect
+  File "/home/jean/.local/lib/python3.5/site-packages/flask_mysqldb/__init__.py", line 81, in connect
+    return MySQLdb.connect(**kwargs)
+  File "/home/jean/.local/lib/python3.5/site-packages/MySQLdb/__init__.py", line 84, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/jean/.local/lib/python3.5/site-packages/MySQLdb/connections.py", line 164, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+MySQLdb._exceptions.OperationalError: (1044, "Access denied for user 'jean'@'%%' to database 'instelipost'")
+2019-05-28 21:28:22,657 level=INFO message=127.0.0.1 - - [28/May/2019 21:28:22] "GET /list HTTP/1.1" 500 -
+2019-05-28 21:28:22,838 level=ERROR message=Exception on /list [GET]
+Traceback (most recent call last):
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 67, in list
+    cur = mysql.connection.cursor()
+  File "/home/jean/.local/lib/python3.5/site-packages/flask_mysqldb/__init__.py", line 94, in connection
+    ctx.mysql_db = self.connect
+  File "/home/jean/.local/lib/python3.5/site-packages/flask_mysqldb/__init__.py", line 81, in connect
+    return MySQLdb.connect(**kwargs)
+  File "/home/jean/.local/lib/python3.5/site-packages/MySQLdb/__init__.py", line 84, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/jean/.local/lib/python3.5/site-packages/MySQLdb/connections.py", line 164, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+MySQLdb._exceptions.OperationalError: (1044, "Access denied for user 'jean'@'%%' to database 'instelipost'")
+2019-05-28 21:28:22,838 level=INFO message=127.0.0.1 - - [28/May/2019 21:28:22] "GET /list HTTP/1.1" 500 -
+2019-05-28 21:28:23,006 level=ERROR message=Exception on /list [GET]
+Traceback (most recent call last):
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 67, in list
+    cur = mysql.connection.cursor()
+  File "/home/jean/.local/lib/python3.5/site-packages/flask_mysqldb/__init__.py", line 94, in connection
+    ctx.mysql_db = self.connect
+  File "/home/jean/.local/lib/python3.5/site-packages/flask_mysqldb/__init__.py", line 81, in connect
+    return MySQLdb.connect(**kwargs)
+  File "/home/jean/.local/lib/python3.5/site-packages/MySQLdb/__init__.py", line 84, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/jean/.local/lib/python3.5/site-packages/MySQLdb/connections.py", line 164, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+MySQLdb._exceptions.OperationalError: (1044, "Access denied for user 'jean'@'%%' to database 'instelipost'")
+2019-05-28 21:28:23,008 level=INFO message=127.0.0.1 - - [28/May/2019 21:28:23] "GET /list HTTP/1.1" 500 -
+2019-05-28 21:29:27,913 level=INFO message= * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-05-28 21:32:52,279 level=INFO message= * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-05-28 21:33:01,257 level=INFO message=127.0.0.1 - - [28/May/2019 21:33:01] "GET / HTTP/1.1" 200 -
+2019-05-28 21:33:17,585 level=INFO message= * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-05-28 21:33:19,722 level=INFO message=127.0.0.1 - - [28/May/2019 21:33:19] "GET / HTTP/1.1" 404 -
+2019-05-28 21:33:22,955 level=INFO message=127.0.0.1 - - [28/May/2019 21:33:22] "GET / HTTP/1.1" 404 -
+2019-05-28 21:33:34,997 level=ERROR message=Not Found
+2019-05-28 21:33:35,001 level=INFO message=127.0.0.1 - - [28/May/2019 21:33:35] "GET /list/2 HTTP/1.1" 200 -
+2019-05-28 21:33:38,985 level=ERROR message=Not Found
+2019-05-28 21:33:38,986 level=INFO message=127.0.0.1 - - [28/May/2019 21:33:38] "GET /list/1 HTTP/1.1" 200 -
+2019-05-28 21:33:42,371 level=ERROR message=Exception on /list [GET]
+Traceback (most recent call last):
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 68, in list
+    cur = mysql.connection.cursor()
+  File "/home/jean/.local/lib/python3.5/site-packages/flask_mysqldb/__init__.py", line 94, in connection
+    ctx.mysql_db = self.connect
+  File "/home/jean/.local/lib/python3.5/site-packages/flask_mysqldb/__init__.py", line 81, in connect
+    return MySQLdb.connect(**kwargs)
+  File "/home/jean/.local/lib/python3.5/site-packages/MySQLdb/__init__.py", line 84, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/jean/.local/lib/python3.5/site-packages/MySQLdb/connections.py", line 164, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+MySQLdb._exceptions.OperationalError: (1044, "Access denied for user 'jean'@'%%' to database 'instelipost'")
+2019-05-28 21:33:42,375 level=INFO message=127.0.0.1 - - [28/May/2019 21:33:42] "GET /list HTTP/1.1" 500 -
+2019-05-28 21:33:53,623 level=ERROR message=MySQL connection is NOT OK!
+2019-05-28 21:33:53,625 level=INFO message=127.0.0.1 - - [28/May/2019 21:33:53] "POST /add HTTP/1.1" 200 -
+2019-05-28 21:36:41,854 level=ERROR message=MySQL connection is NOT OK!
+2019-05-28 21:36:41,855 level=INFO message=127.0.0.1 - - [28/May/2019 21:36:41] "POST /add HTTP/1.1" 200 -
+2019-05-28 21:37:28,391 level=ERROR message=MySQL connection is NOT OK!
+2019-05-28 21:37:28,393 level=INFO message=127.0.0.1 - - [28/May/2019 21:37:28] "POST /add HTTP/1.1" 200 -
+2019-05-28 21:38:12,813 level=INFO message= * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-05-28 21:38:18,817 level=ERROR message=MySQL connection is NOT OK!
+2019-05-28 21:38:18,821 level=INFO message=127.0.0.1 - - [28/May/2019 21:38:18] "POST /add HTTP/1.1" 200 -
+2019-05-28 21:38:21,114 level=ERROR message=MySQL connection is NOT OK!
+2019-05-28 21:38:21,117 level=INFO message=127.0.0.1 - - [28/May/2019 21:38:21] "POST /add HTTP/1.1" 200 -
+2019-05-28 21:38:23,843 level=INFO message=127.0.0.1 - - [28/May/2019 21:38:23] "GET /list HTTP/1.1" 200 -
+2019-05-28 21:38:26,497 level=INFO message=127.0.0.1 - - [28/May/2019 21:38:26] "GET /list HTTP/1.1" 200 -
+2019-05-28 21:38:32,179 level=INFO message=127.0.0.1 - - [28/May/2019 21:38:32] "GET /list HTTP/1.1" 200 -
+2019-05-28 21:39:35,524 level=INFO message= * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-05-28 21:39:39,482 level=ERROR message=MySQL connection is NOT OK!
+2019-05-28 21:39:39,485 level=INFO message=127.0.0.1 - - [28/May/2019 21:39:39] "POST /add HTTP/1.1" 200 -
+2019-05-28 21:54:20,127 level=ERROR message=Exception on /list [GET]
+Traceback (most recent call last):
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 80, in list
+    'finish': item[6]
+IndexError: tuple index out of range
+2019-05-28 21:54:20,142 level=INFO message=127.0.0.1 - - [28/May/2019 21:54:20] "GET /list HTTP/1.1" 500 -
+2019-05-28 21:54:22,210 level=ERROR message=Exception on /list [GET]
+Traceback (most recent call last):
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 80, in list
+    'finish': item[6]
+IndexError: tuple index out of range
+2019-05-28 21:54:22,212 level=INFO message=127.0.0.1 - - [28/May/2019 21:54:22] "GET /list HTTP/1.1" 500 -
+2019-05-28 21:54:30,081 level=INFO message=127.0.0.1 - - [28/May/2019 21:54:30] "GET / HTTP/1.1" 200 -
+2019-05-28 21:54:35,904 level=ERROR message=Not Found
+2019-05-28 21:54:35,905 level=INFO message=127.0.0.1 - - [28/May/2019 21:54:35] "GET /list/1 HTTP/1.1" 200 -
+2019-05-28 21:55:12,444 level=INFO message= * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-05-28 22:57:18,370 level=INFO message= * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-05-28 22:57:24,111 level=INFO message=127.0.0.1 - - [28/May/2019 22:57:24] "GET / HTTP/1.1" 200 -
+2019-05-28 22:57:29,173 level=ERROR message=Exception on /list [GET]
+Traceback (most recent call last):
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 80, in list
+    'finish': item[6]
+IndexError: tuple index out of range
+2019-05-28 22:57:29,175 level=INFO message=127.0.0.1 - - [28/May/2019 22:57:29] "GET /list HTTP/1.1" 500 -
+2019-05-28 22:58:16,687 level=ERROR message=Exception on /list [GET]
+Traceback (most recent call last):
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 80, in list
+    'start': item[4],
+IndexError: tuple index out of range
+2019-05-28 22:58:16,688 level=INFO message=127.0.0.1 - - [28/May/2019 22:58:16] "GET /list HTTP/1.1" 500 -
+2019-05-28 23:01:33,530 level=ERROR message=Exception on /list [GET]
+Traceback (most recent call last):
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 80, in list
+    'finish': item[5]
+IndexError: tuple index out of range
+2019-05-28 23:01:33,532 level=INFO message=127.0.0.1 - - [28/May/2019 23:01:33] "GET /list HTTP/1.1" 500 -
+2019-05-28 23:01:37,397 level=ERROR message=Exception on /list [GET]
+Traceback (most recent call last):
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 80, in list
+    'finish': item[5]
+IndexError: tuple index out of range
+2019-05-28 23:01:37,401 level=INFO message=127.0.0.1 - - [28/May/2019 23:01:37] "GET /list HTTP/1.1" 500 -
+2019-05-28 23:01:38,150 level=ERROR message=Exception on /list [GET]
+Traceback (most recent call last):
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 80, in list
+    'finish': item[5]
+IndexError: tuple index out of range
+2019-05-28 23:01:38,162 level=INFO message=127.0.0.1 - - [28/May/2019 23:01:38] "GET /list HTTP/1.1" 500 -
+2019-05-28 23:01:38,342 level=ERROR message=Exception on /list [GET]
+Traceback (most recent call last):
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 80, in list
+    'finish': item[5]
+IndexError: tuple index out of range
+2019-05-28 23:01:38,343 level=INFO message=127.0.0.1 - - [28/May/2019 23:01:38] "GET /list HTTP/1.1" 500 -
+2019-05-28 23:01:38,763 level=ERROR message=Exception on /list [GET]
+Traceback (most recent call last):
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/jean/.local/lib/python3.5/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 80, in list
+    'finish': item[5]
+IndexError: tuple index out of range
+2019-05-28 23:01:38,765 level=INFO message=127.0.0.1 - - [28/May/2019 23:01:38] "GET /list HTTP/1.1" 500 -
+2019-05-28 23:01:53,127 level=INFO message= * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-05-28 23:01:55,339 level=INFO message=127.0.0.1 - - [28/May/2019 23:01:55] "GET /list HTTP/1.1" 200 -
+2019-05-28 23:03:12,262 level=INFO message= * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-05-28 23:03:12,263 level=INFO message= * Restarting with stat
+2019-05-28 23:03:12,432 level=WARNING message= * Debugger is active!
+2019-05-28 23:03:12,433 level=INFO message= * Debugger PIN: 273-795-185
+2019-05-28 23:03:14,991 level=INFO message=127.0.0.1 - - [28/May/2019 23:03:14] "GET /list HTTP/1.1" 200 -
+2019-05-28 23:03:38,672 level=INFO message= * Detected change in '/home/jean/Documents/personal/Intelispost/Desafio/app.py', reloading
+2019-05-28 23:03:38,704 level=INFO message= * Restarting with stat
+2019-05-28 23:03:38,876 level=WARNING message= * Debugger is active!
+2019-05-28 23:03:38,876 level=INFO message= * Debugger PIN: 273-795-185
+2019-05-28 23:03:39,884 level=INFO message= * Detected change in '/home/jean/Documents/personal/Intelispost/Desafio/app.py', reloading
+2019-05-28 23:03:39,933 level=INFO message= * Restarting with stat
+2019-05-28 23:03:40,147 level=WARNING message= * Debugger is active!
+2019-05-28 23:03:40,147 level=INFO message= * Debugger PIN: 273-795-185
+2019-05-28 23:05:44,947 level=INFO message= * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-05-28 23:05:44,948 level=INFO message= * Restarting with stat
+2019-05-28 23:05:45,105 level=WARNING message= * Debugger is active!
+2019-05-28 23:05:45,106 level=INFO message= * Debugger PIN: 273-795-185
+2019-05-28 23:05:55,029 level=ERROR message=MySQL connection is NOT OK!
+2019-05-28 23:05:55,032 level=INFO message=127.0.0.1 - - [28/May/2019 23:05:55] "POST /add HTTP/1.1" 200 -
+2019-05-29 02:21:39,157 level=INFO message= * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-05-29 02:21:39,159 level=INFO message= * Restarting with stat
+2019-05-29 02:21:39,394 level=WARNING message= * Debugger is active!
+2019-05-29 02:21:39,396 level=INFO message= * Debugger PIN: 170-319-462
+2019-05-28 23:22:11,271 level=INFO message= * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-05-28 23:22:11,273 level=INFO message= * Restarting with stat
+2019-05-28 23:22:11,530 level=WARNING message= * Debugger is active!
+2019-05-28 23:22:11,531 level=INFO message= * Debugger PIN: 273-795-185
+2019-05-29 02:36:39,838 level=INFO message= * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-05-29 02:36:39,840 level=INFO message= * Restarting with stat
+2019-05-29 02:36:40,062 level=WARNING message= * Debugger is active!
+2019-05-29 02:36:40,065 level=INFO message= * Debugger PIN: 314-326-057
