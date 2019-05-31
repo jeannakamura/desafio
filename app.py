@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 from datetime import datetime
 from flask import Flask, jsonify, request, abort
-from flaskext.mysql import MySQL
+from flask_mysqldb import MySQL
 from flask_selfdoc import Autodoc
 
 import logging
@@ -40,22 +40,25 @@ def insert():
         "owner": "Gabriel",
         "start": "2019-05-28 22:30:20",
         "finish": "2019-05-28 22:45:20",
-        "version": 1.0.0,
+        "version": 1.0.0
     }' \
     http://localhost:5000/add
     """
-
     try:
         jsoninfo = request.get_json()
-        jsoninfo['date'] = (datetime.now()).strftime('%Y-%m-%d %H:%M:%S')
+        jsoninfo['start'] = (datetime.now()).strftime('%Y-%m-%d %H:%M:%S')
+        jsoninfo['finish'] = (datetime.now()).strftime('%Y-%m-%d %H:%M:%S')
+        _id = jsoninfo['component']
+        _version = jsoninfo['version']
+        _owner = jsoninfo['owner']
         cur = mysql.connection.cursor()
-        cur.execute("INSERT INTO deploy_infos (id, componet, version, owner, start, finish) VALUES %(id)s, %(component)s, %(version)s, %(owner)s, %(start)s, %(finish)s", (jsoninfo))
+        cur.execute("INSERT INTO deploy_infos (id, component, version, owner, start, finish) VALUES %(id)s, %(component)s, %(version)s, %(owner)s, %(start)s, %(finish)s", (jsoninfo))
         mysql.connection.commit()
         logging.info('A new deploy info has been saved.')
         cur.close()
     except Exception:
         logging.error('MySQL connection is NOT OK!')
-        return jsonify({"mysql": "down"})
+        return jsonify({"mysql": "Something is wrong!"})
 
 @app.route('/list', methods=['GET'])
 @auto.doc()
@@ -99,17 +102,17 @@ def list_id(id):
             for item in data:
                 datatempobj = {
                     'id': item[0],
-                    'componente': item[1],
-                    'versao': item[2],
-                    'responsavel': item[3],
-                    'status': item[4],
-                    'data': item[5]
+                    'componet': item[1],
+                    'version': item[2],
+                    'owner': item[3],
+                    'start': item[4],
+                    'finish': item[5]
                 }
                 datalist.append(datatempobj)
             return jsonify(datalist)
     except:
-        logging.error('ID not found!')
-        return ('ID not found!')
+        logging.error('Something is worng!')
+        return ('something is wrong!')
 
 @app.route('/status')
 @auto.doc()
