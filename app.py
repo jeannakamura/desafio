@@ -52,13 +52,18 @@ def insert():
         _version = jsoninfo['version']
         _owner = jsoninfo['owner']
         cur = mysql.connection.cursor()
-        cur.execute("INSERT INTO deploy_infos (id, component, version, owner, start, finish) VALUES %(id)s, %(component)s, %(version)s, %(owner)s, %(start)s, %(finish)s", (jsoninfo))
+        query = "INSERT INTO deploy_infos (id, component, version, owner, start, finish) VALUES ('%(id)s', '%(component)s', '%(version)s', '%(owner)s', '%(start)s', '%(finish)s')" %(jsoninfo)        
+        print(query)
+        cur.execute(query)
+        # INSERT INTO deploy_infos (id, component, version, owner, start, finish) VALUES ('2', 'AppY', '1.0.0', 'Mike', '2019-05-28 21:49:30', '2019-05-28 21:56:30');
         mysql.connection.commit()
         logging.info('A new deploy info has been saved.')
         cur.close()
-    except Exception:
+        return jsonify({"info": "Ok"})
+    except Exception as e:
+        s = str(e)
         logging.error('MySQL connection is NOT OK!')
-        return jsonify({"mysql": "Something is wrong!"})
+        return jsonify({"info": "Something is wrong!" + s})
 
 @app.route('/list', methods=['GET'])
 @auto.doc()
