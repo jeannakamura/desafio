@@ -15,7 +15,7 @@ auto = Autodoc(app)
 
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = 'nakamura'
+app.config['MYSQL_PASSWORD'] = 'intelispot'
 app.config['MYSQL_DB'] = 'intelipost'
 
 mysql = MySQL(app)
@@ -55,11 +55,10 @@ def insert():
         query = "INSERT INTO deploy_infos (id, component, version, owner, start, finish) VALUES ('%(id)s', '%(component)s', '%(version)s', '%(owner)s', '%(start)s', '%(finish)s')" %(jsoninfo)        
         print(query)
         cur.execute(query)
-        # INSERT INTO deploy_infos (id, component, version, owner, start, finish) VALUES ('2', 'AppY', '1.0.0', 'Mike', '2019-05-28 21:49:30', '2019-05-28 21:56:30');
         mysql.connection.commit()
         logging.info('A new deploy info has been saved.')
         cur.close()
-        return jsonify({"info": "Ok"})
+        return jsonify({"info": "A new deploy info has been saved"})
     except Exception as e:
         s = str(e)
         logging.error('MySQL connection is NOT OK!')

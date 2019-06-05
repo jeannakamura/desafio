@@ -1,8 +1,7 @@
 Flask==1.0.3
-Flask-API==1.1
-Flask-Bcrypt==0.7.1
-Flask-Migrate==2.5.2
 Flask-MySQL==1.4.0
 Flask-Selfdoc==1.1.0
 itsdangerous==1.1.0
 PyMySQL==0.9.3
+jsonify==0.5
+
