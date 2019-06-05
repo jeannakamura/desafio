@@ -2,13 +2,16 @@ version: '3.3'
 services:
   mysql:
     image: mysql:5.7
+    restart: always
     container_name: app-mysql
     volumes:
-       - ./app.sql:/docker-entrypoint-initdb.d/app.sql
+       - ./app.mysql:/docker-entrypoint-initdb.d/app.mysql
        - ./data:/var/lib/mysql
     environment:
-        MYSQL_DATABASE: intelispost
-        MYSQL_ROOT_PASSWORD: intelispost
+        MYSQL_ROOT_PASSWORD: intelipost
+        MYSQL_DATABASE: app
+        MYSQL_USER: 'user'
+        MYSQL_PASSWORD: 'intelipost'
     ports:
       - "3306:3306"
   app:
@@ -24,7 +27,7 @@ services:
       volumes:
         - ./:/app
       environment:
-        MYSQL_HOST: mysql
-        MYSQL_USER: root
-        MYSQL_PASSWORD: intelispot
-        MYSQL_DB: intelipost
+        MYSQL_HOST: mysql:3306
+        MYSQL_USER: user
+        MYSQL_PASSWORD: intelipost
+        MYSQL_DB: app
