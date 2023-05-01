@@ -1,4 +1,4 @@
-Flask==1.0.3
+Flask==2.3.2
 Flask-MySQL==1.4.0
 Flask-Selfdoc==1.1.0
 itsdangerous==1.1.0
